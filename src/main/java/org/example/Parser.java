@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Parser {
 
-    public static void parsingString(String[] strings){
+    public static void parsingString(List<String> strings){
 
 
         List<String> listMark = new LinkedList<>();
@@ -15,9 +15,8 @@ public class Parser {
         List<String> listModification = new LinkedList<>();
 
         for (String string : strings) {
-            List<String> list = new LinkedList<>();
             string = string.replaceAll(" / ", "*");
-            list.addAll(Arrays.asList(string.split("\\*")));
+            List<String> list = new LinkedList<>(Arrays.asList(string.split("\\*")));
             listMark.add(list.get(0));
             listModel.add(list.get(1));
             listEngineType.add(list.get(2));
