@@ -13,11 +13,6 @@ public class App
 {
     public static void main( String[] args ) throws IOException {
 
-        ParsingFile parsingFile = new ParsingFile();
-        Map<Integer, List<String>> map = parsingFile.read("test.xlsx");
-        List<String> resultList = new LinkedList<>();
-        map.entrySet().forEach(m-> resultList.add(m.getValue().get(1)));
-        Parser.parsingString(resultList);
+        ParsingFile.readFile("6_ЭлементыРемонтныхРабот.txt");
     }
-
 }
