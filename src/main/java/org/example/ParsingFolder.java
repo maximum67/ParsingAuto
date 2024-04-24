@@ -12,8 +12,6 @@ public class ParsingFolder {
 
     while(sc.hasNext()){
 
-        if (sc.next().)
     }
-
     }
 }
