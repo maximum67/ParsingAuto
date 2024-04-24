@@ -12,7 +12,6 @@ public class Parser {
         List<String> listModel = new LinkedList<>();
         List<String> listEngineType = new LinkedList<>();
         List<String> listModification = new LinkedList<>();
-
         for (String string : strings) {
             string = string.replaceAll(" / ", "*");
             List<String> list = new LinkedList<>(Arrays.asList(string.split("\\*")));
