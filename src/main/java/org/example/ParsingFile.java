@@ -18,6 +18,7 @@ public class ParsingFile {
     public static void readFile(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         Scanner sc = new Scanner(file);
+
         String PATTERN_1 = "([A-z]*[А-Я]*[а-я*\\/*\\(?а-я*\\)?\\-?а-я*]*\\,*\\s)+(\\s*\\(?[A-z\\-*\\+*]\\d*\\s*\\)?\\-*\\/?)*([А-Я]?[\\d*а-я*\\(?а-я*\\/*\\)?\\-?а-я*]*\\.*\\,*\\s*)*(\\s*\\(?[A-z\\-*\\+*]\\s*\\)?\\-*\\/?)*";
         String PATTERN_2 = "(\\(?((ABS)|(ESP)|(T)|[А-Я])+\\d*\\.?\\)?\\,*\\/?\\s*)+";
         String PATTERN_3 = "[A-Z]{1}\\d{1,2}\\.\\d{4}";
