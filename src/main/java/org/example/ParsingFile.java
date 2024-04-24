@@ -43,4 +43,26 @@ public class ParsingFile {
             i++;
         }
     }
+
+    public static void readFileGroup(String fileName) throws FileNotFoundException {
+        File file = new File(fileName);
+        Scanner sc = new Scanner(file);
+
+        String PATTERN = "(\\(?((ABS)|(ESP)|(T)|[А-Я])+\\d*\\.?\\)?\\,*\\/?\\s*)+";
+        int i = 0;
+        Pattern pattern = Pattern.compile(PATTERN);
+        Matcher matcher;
+        while (i<=182) {
+            matcher = pattern.matcher(sc.nextLine().replaceAll("Услуга","услуга"));
+            if (matcher.find()) {
+                System.out.println(matcher.group());  // Выводит: подстрокой
+            }
+            matcher = pattern.matcher(sc.nextLine().replaceAll("Услуга","услуга"));
+            if (matcher.find()) {
+                System.out.println(matcher.group());  // Выводит: подстрокой
+            }
+            i++;
+        }
+
+    }
 }
