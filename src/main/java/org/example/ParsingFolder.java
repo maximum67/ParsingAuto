@@ -10,8 +10,6 @@ public class ParsingFolder {
     File file = new File(fileName);
     Scanner sc = new Scanner(file);
 
-    while(sc.hasNext()){
-
-    }
+    while(sc.hasNext()){ }
     }
 }

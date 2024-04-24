@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
 public class ParsingFile {
 
     public static void readFile(String fileName) throws FileNotFoundException {
+
         File file = new File(fileName);
         Scanner sc = new Scanner(file);
 
@@ -30,15 +31,15 @@ public class ParsingFile {
         while (i<=6082) {
              matcher = pattern1.matcher(sc.nextLine());
             if (matcher.find()) {
-                System.out.println(matcher.group());  // Выводит: подстрокой
+//                System.out.println(matcher.group());  // Выводит: подстрокой
             }
             matcher = pattern2.matcher(sc.nextLine());
             if (matcher.find()) {
-                System.out.println(matcher.group());  // Выводит: подстрокой
+//                System.out.println(matcher.group());  // Выводит: подстрокой
             }
             matcher = pattern3.matcher(sc.nextLine());
             if (matcher.find()) {
-                System.out.println(matcher.group());  // Выводит: подстрокой
+//                System.out.println(matcher.group());  // Выводит: подстрокой
             }
             i++;
         }

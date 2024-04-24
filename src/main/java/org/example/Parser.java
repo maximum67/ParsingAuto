@@ -8,7 +8,6 @@ public class Parser {
 
     public static void parsingString(List<String> strings){
 
-
         List<String> listMark = new LinkedList<>();
         List<String> listModel = new LinkedList<>();
         List<String> listEngineType = new LinkedList<>();
