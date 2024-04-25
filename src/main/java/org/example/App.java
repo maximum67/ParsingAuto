@@ -12,6 +12,8 @@ import java.util.Map;
 public class App 
 {
     public static void main( String[] args ) throws IOException {
-        ParsingFile.readFile("6_ЭлементыРемонтныхРабот.txt");
+//        ParsingFile.readFile("6_ЭлементыРемонтныхРабот.txt");
+
+        ParsingFolder.readDirectories("ReparDatas");
     }
 }

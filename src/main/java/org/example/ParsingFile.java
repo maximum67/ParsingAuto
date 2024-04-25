@@ -28,7 +28,7 @@ public class ParsingFile {
         Pattern pattern2 = Pattern.compile(PATTERN_2);
         Pattern pattern3 = Pattern.compile(PATTERN_3);
         Matcher matcher;
-        while (i<=6082) {
+        while (sc.hasNext()) {
              matcher = pattern1.matcher(sc.nextLine());
             if (matcher.find()) {
 //                System.out.println(matcher.group());  // Выводит: подстрокой
@@ -53,7 +53,7 @@ public class ParsingFile {
         int i = 0;
         Pattern pattern = Pattern.compile(PATTERN);
         Matcher matcher;
-        while (i<=182) {
+        while (sc.hasNext()) {
             matcher = pattern.matcher(sc.nextLine().replaceAll("Услуга","услуга"));
             if (matcher.find()) {
                 System.out.println(matcher.group());  // Выводит: подстрокой
