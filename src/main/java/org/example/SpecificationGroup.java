@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class SpecificationGroup {
@@ -18,6 +19,14 @@ public class SpecificationGroup {
 
     public List<SpecificationRow> getSpecificationRowList() {
         return specificationRowList;
+    }
+
+    public List<SpecificationRow> getSpecificationRowListOrEmpty(){
+        if (getSpecificationRowList().isEmpty()){
+           return getSpecificationRowList();
+        }else{
+            return new LinkedList<>();
+        }
     }
 
     public void setSpecificationRowList(List<SpecificationRow> specificationRowList) {

@@ -1,6 +1,8 @@
 package org.example;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 public class SpecificationsCar {
 
@@ -20,10 +22,15 @@ public class SpecificationsCar {
         return specificationGroupList;
     }
 
-    public void setSpecificationGroupList(List<SpecificationGroup> specificationGroupList) {
-        this.specificationGroupList = specificationGroupList;
+    public List<SpecificationGroup> getSpecificationGroupListOrEmpty() {
+        if (getSpecificationGroupList().isEmpty()) {
+            return new LinkedList<>();
+        } else {
+            return getSpecificationGroupList();
+        }
     }
-    public Integer getSpecificationGroupListSize(){
-        return this.specificationGroupList.size();
-    }
+        public void setSpecificationGroupList (List < SpecificationGroup > specificationGroupList) {
+            this.specificationGroupList = specificationGroupList;
+        }
+
 }
