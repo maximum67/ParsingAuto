@@ -9,11 +9,13 @@ import java.util.Map;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args ) throws IOException {
+        P
+
 //        ParsingFile.readFile("6_ЭлементыРемонтныхРабот.txt");
 
-        ParsingFolder.readDirectories("ReparDatas");
+//        ParsingFolder.readDirectories("ReparDatas");
     }
 }

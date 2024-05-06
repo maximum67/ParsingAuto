@@ -11,7 +11,7 @@ public class ParsingFolder {
     public static void readDirectories(String fileName) throws FileNotFoundException {
 
         File dir = new File(fileName);
-        String PATTERN_1 = "[A-Z]{1}\\d{1,2}\\.\\d{4}";
+        String PATTERN_1 = "[A-Z]{1}\\d{1,2}\\.\\d{4}\\.?\\d?";
         String PATTERN_2 = "\\d{1,2}\\.\\d{1,2}";
         Pattern pattern1 = Pattern.compile(PATTERN_1);
         Pattern pattern2 = Pattern.compile(PATTERN_2);
@@ -26,12 +26,12 @@ public class ParsingFolder {
                     while (sc.hasNext()) {
                         matcher = pattern1.matcher(sc.nextLine());
                         if (matcher.find()) {
-//                            System.out.println(matcher.group());
+                            System.out.println(matcher.group());
                            if(sc.hasNext()) sc.nextLine();
                         }
                         matcher = pattern2.matcher(sc.nextLine());
                         if (matcher.find()) {
-//                            System.out.println(matcher.group());
+                            System.out.println(matcher.group());
                             if(sc.hasNext()) sc.nextLine();
                         }
                     }
