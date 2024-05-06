@@ -18,14 +18,10 @@ public class SpecificationGroup {
     }
 
     public List<SpecificationRow> getSpecificationRowList() {
-        return specificationRowList;
-    }
-
-    public List<SpecificationRow> getSpecificationRowListOrEmpty(){
-        if (getSpecificationRowList().isEmpty()){
-           return getSpecificationRowList();
-        }else{
+        if (specificationRowList == null) {
             return new LinkedList<>();
+        } else {
+            return specificationRowList;
         }
     }
 
@@ -34,5 +30,13 @@ public class SpecificationGroup {
     }
     public Integer getSpecificationRowListSize(){
         return this.getSpecificationRowList().size();
+    }
+
+    @Override
+    public String toString() {
+        return "SpecificationGroup{" +
+                "headerGroup='" + headerGroup + '\'' +"\n"+
+                ", specificationRowList=" + specificationRowList +"\n"+
+                '}';
     }
 }

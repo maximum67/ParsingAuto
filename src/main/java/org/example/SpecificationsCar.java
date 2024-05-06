@@ -19,18 +19,22 @@ public class SpecificationsCar {
     }
 
     public List<SpecificationGroup> getSpecificationGroupList() {
-        return specificationGroupList;
-    }
-
-    public List<SpecificationGroup> getSpecificationGroupListOrEmpty() {
-        if (getSpecificationGroupList().isEmpty()) {
-            return new LinkedList<>();
+        if (specificationGroupList == null) {
+          return new LinkedList<>();
         } else {
-            return getSpecificationGroupList();
+            return specificationGroupList;
         }
     }
-        public void setSpecificationGroupList (List < SpecificationGroup > specificationGroupList) {
-            this.specificationGroupList = specificationGroupList;
-        }
 
+    public void setSpecificationGroupList(List<SpecificationGroup> specificationGroupList) {
+        this.specificationGroupList = specificationGroupList;
+    }
+
+    @Override
+    public String toString() {
+        return "SpecificationsCar{" +
+                "repairCode='" + repairCode + '\'' + "\n"+
+                ", specificationGroupList=" + specificationGroupList +"\n"+
+                '}';
+    }
 }

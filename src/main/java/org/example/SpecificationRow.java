@@ -32,4 +32,12 @@ public class SpecificationRow {
         this.specificationValue = specificationValue;
     }
 
+    @Override
+    public String toString() {
+        return "SpecificationRow{" +
+                "specificationName='" + specificationName + '\'' +
+                ", specificationUnit='" + specificationUnit + '\'' +
+                ", specificationValue='" + specificationValue + '\'' +
+                '}'+"\n";
+    }
 }
