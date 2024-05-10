@@ -13,7 +13,8 @@ public class App
 {
     public static void main( String[] args ) throws IOException {
 //        ParsingFile.readFile("6_ЭлементыРемонтныхРабот.txt");
-
-        TechnikalData.readTechnikalData("ReparDatas");
+        List<SpecificationsGroupName> specificationsGroupNameList = TechnikalData.readeGroup("Группы технических данных");
+//        specificationsGroupNameList.forEach(s->System.out.println(s.getName()));
+        TechnikalData.readTechnikalData("ReparDatas",specificationsGroupNameList );
     }
 }
